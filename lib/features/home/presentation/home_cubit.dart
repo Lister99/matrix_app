@@ -24,7 +24,7 @@ class HomeCubit extends Cubit<HomeState> {
     } on FormatException catch (_) {
       _emitSuccess(
           overlay: HomeRotateErrorMessage(
-              message: 'El string adjuntado no se puede convertir a matriz'));
+              message: 'El formato ingresado no es válido para ser una matriz'));
     } catch (e) {
       _emitSuccess(
           overlay: HomeRotateErrorMessage(message: 'Hubo un error al transformar a matriz'));
